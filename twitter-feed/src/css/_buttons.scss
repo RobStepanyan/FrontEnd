@@ -1,0 +1,48 @@
+/*
+
+**********
+Buttons
+**********
+
+*/
+
+%btn {
+    border-radius: var(--b-radius);
+    width: min-content;
+    font-weight: var(--f-w-semi-bold);
+    display: flex;
+    align-items: center;
+    transition: all var(--t-duration);
+    cursor: pointer;
+}
+
+%btn-primary-secondary {
+    @extend %btn;
+    border: 1px solid var(--c-primary);
+}
+
+.btn-primary {
+    @extend %btn-primary-secondary;
+    background: var(--c-primary);
+    color: var(--c-t-primary-contrast);
+
+    padding: 0 $spacer-4;
+    min-height: var(--btn-size-2);
+
+    &:hover {
+        background: var(--c-primary-hover);
+    }
+}
+
+.btn-secondary {
+    @extend %btn-primary-secondary;
+    background: transparent;
+    color: var(--c-primary);
+
+    padding: 0 $spacer-4;
+    min-height: var(--btn-size-1);
+
+    &:hover {
+        background: var(--c-secondary-hover);
+    }
+}

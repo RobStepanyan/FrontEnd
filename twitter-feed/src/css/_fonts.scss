@@ -1,0 +1,35 @@
+/*
+
+**********
+Fonts
+**********
+
+*/
+
+body {
+    font-family: var(--f-f-secondary);
+}
+
+.h {
+    font-family: var(--f-f-primary);
+    font-size: var(--f-s-heading);
+    font-weight: var(--f-w-bold);
+    color: var(--c-text-primary);
+    white-space: nowrap;
+}
+
+.p {
+    font-family: var(--f-f-secondary);
+    font-size: var(--f-s-normal);
+    font-weight: var(--f-w-normal);
+    color: var(--c-text-primary);
+    white-space: pre-wrap;
+}
+
+.semi-bold {
+    font-weight: var(--f-w-semi-bold);
+}
+
+.bold {
+    font-weight: var(--f-w-bold);
+}
