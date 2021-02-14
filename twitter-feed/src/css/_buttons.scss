@@ -3,7 +3,15 @@
 **********
 Buttons
 **********
+List of Buttons:
+1. Primary (.btn-primary)
+2. Secodary (.btn-secondary)
+3. Primary Button with Icon (.btn-icon-primary)
+4. Secondary Button with Icon (.btn-icon-secondary)
+5. Button with Logo (.btn-logo)
 
+.disable works on all buttons.
+.active only on No. 4
 */
 
 %btn {
@@ -12,17 +20,18 @@ Buttons
     font-weight: var(--f-w-semi-bold);
     display: flex;
     align-items: center;
+    justify-content: center;
     transition: all var(--t-duration);
     cursor: pointer;
 }
 
-%btn-primary-secondary {
+%btn-w-border {
     @extend %btn;
     border: 1px solid var(--c-primary);
 }
 
 .btn-primary {
-    @extend %btn-primary-secondary;
+    @extend %btn-w-border;
     background: var(--c-primary);
     color: var(--c-t-primary-contrast);
 
@@ -35,12 +44,109 @@ Buttons
 }
 
 .btn-secondary {
-    @extend %btn-primary-secondary;
+    @extend %btn-w-border;
     background: transparent;
     color: var(--c-primary);
 
     padding: 0 $spacer-4;
     min-height: var(--btn-size-1);
+
+    &:hover {
+        background: var(--c-secondary-hover);
+    }
+}
+
+.btn-icon-primary {
+    @extend %btn-w-border;
+    background: var(--c-primary);
+
+    padding: 0 $spacer-4 * 2;
+    height: var(--btn-size-3);
+    width: 90%;
+    box-sizing: border-box;
+
+    @include media-breakpoint-down(xl) {
+        width: var(--btn-size-3);
+        border: none;
+        padding: 0;
+    }
+
+    .text {
+        font-family: var(--f-f-primary);
+        font-size: var(--f-s-normal);
+        font-weight: var(--f-w-semi-bold);
+        color: var(--c-t-primary-contrast);
+
+        @include media-breakpoint-down(xl) {
+            display: none
+        }
+    }
+
+    .icon,
+    .icon svg {
+        height: var(--icon-size-1);
+        color: var(--c-t-primary-contrast);
+        fill: var(--c-t-primary-contrast);
+
+        @include media-breakpoint-up(xl) {
+            display: none
+        }
+    }
+
+    &:hover {
+        background-color: var(--c-primary-hover);
+    }
+}
+
+.btn-icon-secondary {
+    @extend %btn;
+    padding: $spacer-3;
+
+    .text {
+        font-family: var(--f-f-primary);
+        font-size: var(--f-s-heading);
+        font-weight: var(--f-w-semi-bold);
+        color: var(--c-t-primary);
+        margin-left: $spacer-5;
+        margin-right: $spacer-4;
+
+        @include media-breakpoint-down(xxl) {
+            display: none
+        }
+    }
+
+    .icon,
+    .icon svg {
+        height: var(--icon-size-2);
+        color: var(--c-t-primary);
+        fill: var(--c-t-primary);
+    }
+
+    &:hover {
+        background: var(--c-secondary-hover);
+    }
+
+    &:hover,
+    &.active {
+
+        .text,
+        .icon svg {
+            color: var(--c-primary);
+            fill: var(--c-primary);
+        }
+    }
+}
+
+.btn-logo {
+    @extend %btn;
+    height: var(--btn-size-3);
+    width: var(--btn-size-3);
+
+    svg {
+        height: var(--icon-size-3);
+        color: var(--c-secondary);
+        fill: var(--c-secondary);
+    }
 
     &:hover {
         background: var(--c-secondary-hover);

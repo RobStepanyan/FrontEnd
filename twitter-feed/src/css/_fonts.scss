@@ -16,14 +16,23 @@ body {
     font-weight: var(--f-w-bold);
     color: var(--c-text-primary);
     white-space: nowrap;
+    word-wrap: break-word;
 }
 
 .p {
-    font-family: var(--f-f-secondary);
     font-size: var(--f-s-normal);
     font-weight: var(--f-w-normal);
     color: var(--c-text-primary);
     white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+small {
+    font-size: var(--f-s-);
+    font-weight: var(--f-w-normal);
+    color: var(--c-t-secondary);
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .semi-bold {

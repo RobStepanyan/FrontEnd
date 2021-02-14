@@ -6,7 +6,7 @@ Variables
 
 */
 
-$spacer: 10px !default;
+$spacer: 10px;
 
 $spacer-1: $spacer / 5; // 2px
 $spacer-2: $spacer / 2; // 5px
@@ -20,13 +20,19 @@ $spacers: (0: 0,
     3: $spacer-3,
     4: $spacer-4,
     5: $spacer-5,
-) !default;
+);
 
 $grid-breakpoints: (xs: 0,
     sm: 500px,
-    md: 1005px,
-    lg: 1095px,
-    xl: 1280px,
+    md: 705px,
+    lg: 1005px,
+    xl: 1095px,
+    xxl: 1280px);
+
+$container-max-widths: (sm: 500px,
+    md: 705px,
+    lg: 1005px,
+    xl: 1095px,
     xxl: 1280px);
 
 :root {
@@ -52,6 +58,7 @@ $grid-breakpoints: (xs: 0,
     --f-w-semi-bold: 700;
     --f-w-bold: 800;
     // s - size
+    --f-s-small: 13px;
     --f-s-normal: 15px;
     --f-s-heading: 19px;
 
@@ -65,5 +72,10 @@ $grid-breakpoints: (xs: 0,
     // Buttons
     --btn-size-1: 30px;
     --btn-size-2: 40px;
-    --btn-size-3: 50px;
+    --btn-size-3: 47px;
+
+    // Icons
+    --icon-size-1: 22.5px;
+    --icon-size-2: 26.25px;
+    --icon-size-3: 30px;
 }
