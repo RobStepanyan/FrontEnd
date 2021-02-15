@@ -42,3 +42,15 @@ small {
 .bold {
     font-weight: var(--f-w-bold);
 }
+
+.text-primary-contrast {
+    color: var(--c-t-primary-contrast);
+}
+
+.text-primary {
+    color: var(--c-t-primary);
+}
+
+.text-secondary {
+    color: var(--c-t-secondary);
+}
