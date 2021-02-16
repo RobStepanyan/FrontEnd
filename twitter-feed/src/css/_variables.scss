@@ -65,6 +65,7 @@ $container-max-widths: (sm: 500px,
     // Borders
     --b-radius: 9999px;
     --b-width: 1px;
+    --b-color: #2F3336;
 
     // Transitions
     --t-duration: .2s;
@@ -73,10 +74,14 @@ $container-max-widths: (sm: 500px,
     --btn-size-1: 30px;
     --btn-size-2: 40px;
     --btn-size-3: 49px;
+    --btn-size-4: 37px;
 
     // Icons
     --icon-size-1: 22.5px;
     --icon-size-2: 26.25px;
     --icon-size-3: 30px;
     --icon-size-4: 39px;
+
+    // Div Heights
+    --d-feed-header: 53px;
 }

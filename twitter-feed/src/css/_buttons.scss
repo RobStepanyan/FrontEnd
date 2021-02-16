@@ -8,8 +8,9 @@ List of Buttons:
 2. Secodary (.btn-secondary)
 3. Primary Button with Icon (.btn-icon-primary)
 4. Secondary Button with Icon (.btn-icon-secondary)
-5. Button with Logo (.btn-logo)
-6. Account's Button (.btn-account)
+5. Button with Icon (.btn-icon)
+6. Button with Logo (.btn-logo)
+7. Account's Button (.btn-account)
 
 .disable works on all buttons.
 .active only on No. 4
@@ -57,6 +58,24 @@ List of Buttons:
 
     padding: 0 $spacer-4;
     min-height: var(--btn-size-1);
+
+    &:hover {
+        background: var(--c-secondary-hover);
+    }
+}
+
+.btn-icon {
+    @extend %btn;
+    height: var(--btn-size-4);
+    width: var(--btn-size-4);
+    margin-right: calc(-.5 * var(--btn-size-4) - -.5 * var(--icon-size-1));
+
+    svg {
+        height: var(--icon-size-1);
+        width: var(--icon-size-1);
+        color: var(--c-primary);
+        fill: var(--c-primary);
+    }
 
     &:hover {
         background: var(--c-secondary-hover);

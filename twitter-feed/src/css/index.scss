@@ -37,7 +37,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
 
-    width: 58px;
+    max-width: 58px;
     padding: 0 $spacer-2;
 
     @include media-breakpoint-up(sm) {
@@ -45,11 +45,32 @@ body {
     }
 
     @include media-breakpoint-up(xxl) {
-        width: 255px;
+        max-width: 255px;
     }
 
     #top {
-        width: 100%;
+        max-width: 100%;
+    }
+}
+
+#feed {
+    border-left: var(--b-width) solid var(--b-color);
+    border-right: var(--b-width) solid var(--b-color);
+    height: 100vh;
+    max-width: 100%;
+
+    @include media-breakpoint-up(md) {
+        max-width: 600px - 2 * $spacer-4 - 2px;
+    }
+
+    .feed-section {
+        border-bottom: var(--b-width) solid var(--b-color);
+        padding: 0 $spacer-4;
+        align-items: center;
+
+        &:first-of-type {
+            height: var(--d-feed-header);
+        }
     }
 }
 
@@ -65,6 +86,7 @@ a {
 .container-xl,
 .container-xxl {
     padding: 0;
+    display: flex;
 }
 
 #nav>a {
@@ -83,6 +105,22 @@ a {
     justify-content: center;
 }
 
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
 .d-inline-flex {
     display: inline-flex;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.border-bottom {
+    border-bottom: var(--b-width) solid var(--b-color);
+}
+
+.border-0 {
+    border: none !important;
 }
